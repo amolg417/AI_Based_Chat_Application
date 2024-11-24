@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  /* background-color: #040d12; */
+  background: url('../public/wp.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #25d366;
+  border-radius: 0.5rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #075e54;
+}
+
+input,
+button {
+  box-shadow: none !important;
+}
+
+@keyframes growMessage {
+  0% {
+    transform: scaleX(0); /* Start with no width */
+    opacity: 0; /* Start with no opacity */
+  }
+  30% {
+    transform: scaleX(1.1); /* Grow to 110% width */
+    opacity: 1; /* Start becoming visible */
+  }
+  100% {
+    transform: scaleX(1); /* End with 100% width (original size) */
+    opacity: 1; /* Fully visible */
+  }
+}

@@ -1,0 +1,112 @@
+.chat-container {
+  box-sizing: border-box;
+  width: 50vw;
+  margin: 2rem auto;
+}
+
+.messages-container {
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  padding: 1rem 0.75rem;
+  overflow-y: auto;
+  margin-bottom: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  background-color: #ece5dd;
+  font-size: 1rem;
+  height: 50vh;
+}
+
+.messages-container .loader-container {
+  box-sizing: border-box;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.messages-container .joined-message {
+  box-sizing: border-box;
+  border-radius: 0.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.75rem;
+}
+
+.messages-container .joined-message span {
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  padding: 0.25rem 1rem;
+  border-radius: 2rem;
+}
+
+.messages-container .loader {
+  box-sizing: border-box;
+  display: inline-block;
+  border: 0.25rem solid #ccc;
+  border-top: 0.25rem solid #25d366;
+  border-right: 0.25rem solid #25d366;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  animation: spin 0.75s linear infinite;
+  margin-left: 0.5rem;
+}
+
+.message {
+  display: flex;
+}
+
+.message span {
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  max-width: 80%;
+  display: inline-block; /* Display messages inline */
+  overflow: hidden; /* Hide overflow content */
+  /* white-space: nowrap; Prevent text from wrapping */
+  opacity: 0; /* Initially hide the message */
+  animation: growMessage 0.4s ease-out forwards; /* Apply the animation */
+}
+
+.messages-container .sender {
+  font-size: 0.75rem;
+}
+
+.timestamp {
+  font-size: 0.6rem;
+  opacity: 0.75;
+  text-align: right;
+  margin-top: 0.5rem;
+}
+
+.client {
+  background-color: #dcf8c6;
+  border-bottom-right-radius: 0 !important;
+  transform-origin: right center; /* Set the transformation origin to the right */
+}
+
+.server {
+  background-color: #fff;
+  border-bottom-left-radius: 0 !important;
+  transform-origin: left center; /* Set the transformation origin to the right */
+}
+
+@media (max-width: 700px) {
+  .chat-container {
+    box-sizing: border-box;
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+  }
+
+  .messages-container {
+    border-radius: 0;
+    margin-bottom: 0;
+    height: 55vh;
+  }
+}
